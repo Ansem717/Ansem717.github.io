@@ -4,11 +4,11 @@ name:
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "20 21 * * *"
 
 jobs: 
   cron:
     runs-on: ubuntu-latest
     steps:
-    - name: Run a one-line script
-      run: echo Hello, world
+    - name: Execute Python Script
+      run: python3 test_post_from_github.py
