@@ -12,12 +12,13 @@ body {
   overflow: hidden;
   display: grid;
   grid-template: repeat(20, 1fr) / repeat(40, 1fr);
+  cursor: none;
 }
 
-.cell {
+i {
   width: 100%;
   height: 100%;
-  border: 1px solid gray;
+  //border: 1px solid gray;
   z-index: 2;
 }
 
@@ -30,29 +31,33 @@ body {
 
 /* 40 Columns */
 @for $i from 0 to 40 {
-  .cell:nth-child(40n + #{$i + 1}):hover~.content {
+  i:nth-child(40n + #{$i + 1}):hover~.content {
     --positionX: #{$i};
   }
 }
 
 /* 20 rows */
 @for $k from 0 to 20 {
-  .cell:nth-child(n + #{40 * $k + 1}):nth-child(-n + #{40 * ($k + 1)}):hover~.content {
+  i:nth-child(n + #{40 * $k + 1}):nth-child(-n + #{40 * ($k + 1)}):hover~.content {
     --positionY: #{$k};
   }
 }
 
 
 .square {
-  --myW: calc(100vw/40);
-  --myH: calc(100vh/20);
+  --myW: calc(100vw/8);
+  --myH: calc(100vh/4);
 
   width: var(--myW);
   height: var(--myH);
-  background: green;
+  background: rgb(255, 192, 64);
+  border-radius: var(--myW)/var(--myH);
+
   transform: translate(
-    calc( var(--positionX) * (100vw/40)), 
-    calc( var(--positionY) * (100vh/20))
+    calc( var(--positionX) * (100vw/40) - var(--myW)/2.5), 
+    calc( var(--positionY) * (100vh/20) - var(--myH)/2.5)
   );
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
+
+  filter: blur(4em);
 }

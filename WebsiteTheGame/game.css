@@ -12,12 +12,12 @@ body {
   overflow: hidden;
   display: grid;
   grid-template: repeat(20, 1fr)/repeat(40, 1fr);
+  cursor: none;
 }
 
-.cell {
+i {
   width: 100%;
   height: 100%;
-  border: 1px solid gray;
   z-index: 2;
 }
 
@@ -28,255 +28,257 @@ body {
 }
 
 /* 40 Columns */
-.cell:nth-child(40n+1):hover ~ .content {
+i:nth-child(40n+1):hover ~ .content {
   --positionX: 0;
 }
 
-.cell:nth-child(40n+2):hover ~ .content {
+i:nth-child(40n+2):hover ~ .content {
   --positionX: 1;
 }
 
-.cell:nth-child(40n+3):hover ~ .content {
+i:nth-child(40n+3):hover ~ .content {
   --positionX: 2;
 }
 
-.cell:nth-child(40n+4):hover ~ .content {
+i:nth-child(40n+4):hover ~ .content {
   --positionX: 3;
 }
 
-.cell:nth-child(40n+5):hover ~ .content {
+i:nth-child(40n+5):hover ~ .content {
   --positionX: 4;
 }
 
-.cell:nth-child(40n+6):hover ~ .content {
+i:nth-child(40n+6):hover ~ .content {
   --positionX: 5;
 }
 
-.cell:nth-child(40n+7):hover ~ .content {
+i:nth-child(40n+7):hover ~ .content {
   --positionX: 6;
 }
 
-.cell:nth-child(40n+8):hover ~ .content {
+i:nth-child(40n+8):hover ~ .content {
   --positionX: 7;
 }
 
-.cell:nth-child(40n+9):hover ~ .content {
+i:nth-child(40n+9):hover ~ .content {
   --positionX: 8;
 }
 
-.cell:nth-child(40n+10):hover ~ .content {
+i:nth-child(40n+10):hover ~ .content {
   --positionX: 9;
 }
 
-.cell:nth-child(40n+11):hover ~ .content {
+i:nth-child(40n+11):hover ~ .content {
   --positionX: 10;
 }
 
-.cell:nth-child(40n+12):hover ~ .content {
+i:nth-child(40n+12):hover ~ .content {
   --positionX: 11;
 }
 
-.cell:nth-child(40n+13):hover ~ .content {
+i:nth-child(40n+13):hover ~ .content {
   --positionX: 12;
 }
 
-.cell:nth-child(40n+14):hover ~ .content {
+i:nth-child(40n+14):hover ~ .content {
   --positionX: 13;
 }
 
-.cell:nth-child(40n+15):hover ~ .content {
+i:nth-child(40n+15):hover ~ .content {
   --positionX: 14;
 }
 
-.cell:nth-child(40n+16):hover ~ .content {
+i:nth-child(40n+16):hover ~ .content {
   --positionX: 15;
 }
 
-.cell:nth-child(40n+17):hover ~ .content {
+i:nth-child(40n+17):hover ~ .content {
   --positionX: 16;
 }
 
-.cell:nth-child(40n+18):hover ~ .content {
+i:nth-child(40n+18):hover ~ .content {
   --positionX: 17;
 }
 
-.cell:nth-child(40n+19):hover ~ .content {
+i:nth-child(40n+19):hover ~ .content {
   --positionX: 18;
 }
 
-.cell:nth-child(40n+20):hover ~ .content {
+i:nth-child(40n+20):hover ~ .content {
   --positionX: 19;
 }
 
-.cell:nth-child(40n+21):hover ~ .content {
+i:nth-child(40n+21):hover ~ .content {
   --positionX: 20;
 }
 
-.cell:nth-child(40n+22):hover ~ .content {
+i:nth-child(40n+22):hover ~ .content {
   --positionX: 21;
 }
 
-.cell:nth-child(40n+23):hover ~ .content {
+i:nth-child(40n+23):hover ~ .content {
   --positionX: 22;
 }
 
-.cell:nth-child(40n+24):hover ~ .content {
+i:nth-child(40n+24):hover ~ .content {
   --positionX: 23;
 }
 
-.cell:nth-child(40n+25):hover ~ .content {
+i:nth-child(40n+25):hover ~ .content {
   --positionX: 24;
 }
 
-.cell:nth-child(40n+26):hover ~ .content {
+i:nth-child(40n+26):hover ~ .content {
   --positionX: 25;
 }
 
-.cell:nth-child(40n+27):hover ~ .content {
+i:nth-child(40n+27):hover ~ .content {
   --positionX: 26;
 }
 
-.cell:nth-child(40n+28):hover ~ .content {
+i:nth-child(40n+28):hover ~ .content {
   --positionX: 27;
 }
 
-.cell:nth-child(40n+29):hover ~ .content {
+i:nth-child(40n+29):hover ~ .content {
   --positionX: 28;
 }
 
-.cell:nth-child(40n+30):hover ~ .content {
+i:nth-child(40n+30):hover ~ .content {
   --positionX: 29;
 }
 
-.cell:nth-child(40n+31):hover ~ .content {
+i:nth-child(40n+31):hover ~ .content {
   --positionX: 30;
 }
 
-.cell:nth-child(40n+32):hover ~ .content {
+i:nth-child(40n+32):hover ~ .content {
   --positionX: 31;
 }
 
-.cell:nth-child(40n+33):hover ~ .content {
+i:nth-child(40n+33):hover ~ .content {
   --positionX: 32;
 }
 
-.cell:nth-child(40n+34):hover ~ .content {
+i:nth-child(40n+34):hover ~ .content {
   --positionX: 33;
 }
 
-.cell:nth-child(40n+35):hover ~ .content {
+i:nth-child(40n+35):hover ~ .content {
   --positionX: 34;
 }
 
-.cell:nth-child(40n+36):hover ~ .content {
+i:nth-child(40n+36):hover ~ .content {
   --positionX: 35;
 }
 
-.cell:nth-child(40n+37):hover ~ .content {
+i:nth-child(40n+37):hover ~ .content {
   --positionX: 36;
 }
 
-.cell:nth-child(40n+38):hover ~ .content {
+i:nth-child(40n+38):hover ~ .content {
   --positionX: 37;
 }
 
-.cell:nth-child(40n+39):hover ~ .content {
+i:nth-child(40n+39):hover ~ .content {
   --positionX: 38;
 }
 
-.cell:nth-child(40n+40):hover ~ .content {
+i:nth-child(40n+40):hover ~ .content {
   --positionX: 39;
 }
 
 /* 20 rows */
-.cell:nth-child(n+1):nth-child(-n+40):hover ~ .content {
+i:nth-child(n+1):nth-child(-n+40):hover ~ .content {
   --positionY: 0;
 }
 
-.cell:nth-child(n+41):nth-child(-n+80):hover ~ .content {
+i:nth-child(n+41):nth-child(-n+80):hover ~ .content {
   --positionY: 1;
 }
 
-.cell:nth-child(n+81):nth-child(-n+120):hover ~ .content {
+i:nth-child(n+81):nth-child(-n+120):hover ~ .content {
   --positionY: 2;
 }
 
-.cell:nth-child(n+121):nth-child(-n+160):hover ~ .content {
+i:nth-child(n+121):nth-child(-n+160):hover ~ .content {
   --positionY: 3;
 }
 
-.cell:nth-child(n+161):nth-child(-n+200):hover ~ .content {
+i:nth-child(n+161):nth-child(-n+200):hover ~ .content {
   --positionY: 4;
 }
 
-.cell:nth-child(n+201):nth-child(-n+240):hover ~ .content {
+i:nth-child(n+201):nth-child(-n+240):hover ~ .content {
   --positionY: 5;
 }
 
-.cell:nth-child(n+241):nth-child(-n+280):hover ~ .content {
+i:nth-child(n+241):nth-child(-n+280):hover ~ .content {
   --positionY: 6;
 }
 
-.cell:nth-child(n+281):nth-child(-n+320):hover ~ .content {
+i:nth-child(n+281):nth-child(-n+320):hover ~ .content {
   --positionY: 7;
 }
 
-.cell:nth-child(n+321):nth-child(-n+360):hover ~ .content {
+i:nth-child(n+321):nth-child(-n+360):hover ~ .content {
   --positionY: 8;
 }
 
-.cell:nth-child(n+361):nth-child(-n+400):hover ~ .content {
+i:nth-child(n+361):nth-child(-n+400):hover ~ .content {
   --positionY: 9;
 }
 
-.cell:nth-child(n+401):nth-child(-n+440):hover ~ .content {
+i:nth-child(n+401):nth-child(-n+440):hover ~ .content {
   --positionY: 10;
 }
 
-.cell:nth-child(n+441):nth-child(-n+480):hover ~ .content {
+i:nth-child(n+441):nth-child(-n+480):hover ~ .content {
   --positionY: 11;
 }
 
-.cell:nth-child(n+481):nth-child(-n+520):hover ~ .content {
+i:nth-child(n+481):nth-child(-n+520):hover ~ .content {
   --positionY: 12;
 }
 
-.cell:nth-child(n+521):nth-child(-n+560):hover ~ .content {
+i:nth-child(n+521):nth-child(-n+560):hover ~ .content {
   --positionY: 13;
 }
 
-.cell:nth-child(n+561):nth-child(-n+600):hover ~ .content {
+i:nth-child(n+561):nth-child(-n+600):hover ~ .content {
   --positionY: 14;
 }
 
-.cell:nth-child(n+601):nth-child(-n+640):hover ~ .content {
+i:nth-child(n+601):nth-child(-n+640):hover ~ .content {
   --positionY: 15;
 }
 
-.cell:nth-child(n+641):nth-child(-n+680):hover ~ .content {
+i:nth-child(n+641):nth-child(-n+680):hover ~ .content {
   --positionY: 16;
 }
 
-.cell:nth-child(n+681):nth-child(-n+720):hover ~ .content {
+i:nth-child(n+681):nth-child(-n+720):hover ~ .content {
   --positionY: 17;
 }
 
-.cell:nth-child(n+721):nth-child(-n+760):hover ~ .content {
+i:nth-child(n+721):nth-child(-n+760):hover ~ .content {
   --positionY: 18;
 }
 
-.cell:nth-child(n+761):nth-child(-n+800):hover ~ .content {
+i:nth-child(n+761):nth-child(-n+800):hover ~ .content {
   --positionY: 19;
 }
 
 .square {
-  --myW: calc(100vw/40);
-  --myH: calc(100vh/20);
+  --myW: calc(100vw/8);
+  --myH: calc(100vh/4);
   width: var(--myW);
   height: var(--myH);
-  background: green;
-  transform: translate(calc(var(--positionX) * 2.5vw), calc(var(--positionY) * 5vh));
-  transition: all 0.3s ease-out;
+  background: rgb(255, 192, 64);
+  border-radius: var(--myW)/var(--myH);
+  transform: translate(calc(var(--positionX) * 2.5vw - var(--myW) / 2.5), calc(var(--positionY) * 5vh - var(--myH) / 2.5));
+  transition: all 0.2s ease-out;
+  filter: blur(4em);
 }
 
 /*# sourceMappingURL=game.css.map */
