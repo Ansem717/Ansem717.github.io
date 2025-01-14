@@ -1,0 +1,25 @@
+
+name:
+  Sign Of The Day Scrapper
+
+on:
+  schedule:
+    - cron: "0 21 * * *"
+
+jobs: 
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2 # Checkout the repository content to github runner.
+
+      - name: Setup Python Version
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Install the python version needed
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip requests beautifulsoup4
+
+      - name: Execute Sign Of The Day Scrapper (correct)
+        run: python sign_of_the_day_scraper_correct.py
