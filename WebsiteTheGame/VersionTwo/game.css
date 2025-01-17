@@ -1,0 +1,91 @@
+:root {
+  --r: 30s;
+  --b: 1.6s;
+}
+
+body {
+  background-color: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 1em);
+}
+
+.scene {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: sceneRotate var(--r) infinite linear;
+}
+
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@property --x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+.ball {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -1em;
+  left: -1em;
+  background: radial-gradient(circle at var(--x) 0%, lightgreen, 30%, black);
+  animation: sceneRotate var(--r) infinite linear reverse, lightRotate var(--r) infinite linear alternate;
+}
+.ball:active {
+  animation: bounce var(--b) ease-out 1, lightRotate var(--r) infinite linear alternate, sceneRotate var(--r) infinite linear reverse;
+}
+
+@keyframes lightRotate {
+  0% {
+    --x: -100%;
+  }
+  100% {
+    --x: 200%;
+  }
+}
+@keyframes bounce {
+  0%, 57%, 85%, 100% {
+    bottom: -1em;
+    animation-timing-function: ease-out;
+  }
+  28% {
+    bottom: 3em;
+    animation-timing-function: ease-in;
+  }
+  71% {
+    bottom: 1em;
+    animation-timing-function: ease-in;
+  }
+  92.5% {
+    bottom: 0em;
+    animation-timing-function: ease-in;
+  }
+}
+.ballShadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#000, rgba(0, 0, 0, 0) 50%);
+}
+
+.floor {
+  width: 16em;
+  height: 16em;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+  background-size: 100%, 1em 1em;
+  position: absolute;
+  top: 1em;
+  transform: translate(-50%, -50%) rotateX(90deg);
+}
+
+/*# sourceMappingURL=game.css.map */
