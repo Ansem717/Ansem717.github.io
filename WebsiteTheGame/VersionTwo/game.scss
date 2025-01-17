@@ -22,13 +22,33 @@ body {
 }
 
 @keyframes sceneRotate {
-  to {transform: rotateY(360deg);}
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 @property --x {
   syntax: '<percentage>';
   inherits: false;
-  initial-value: 0%;
+  initial-value: 50%;
+}
+
+@property --y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 5%;
+}
+
+@property --intensity {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: lightgreen;
+}
+
+@property --lightStrength {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 25%;
 }
 
 .ball {
@@ -39,60 +59,135 @@ body {
   position: absolute;
   bottom: -1em;
   left: -1em;
-  background: radial-gradient(
-    circle at var(--x) 0%,
-    lightgreen, 30%, black
-  );
+  background:
+    radial-gradient(circle at var(--x) var(--y), var(--intensity), var(--lightStrength), black calc(var(--lightStrength) + 50%));
 
-  animation: 
+  animation:
     sceneRotate var(--r) infinite linear reverse,
-    lightRotate var(--r) infinite linear alternate;
+    lightRotate var(--r) infinite linear;
 
   &:active {
     animation:
       bounce var(--b) ease-out 1,
-      lightRotate var(--r) infinite linear alternate,
+      lightRotate var(--r) infinite linear,
       sceneRotate var(--r) infinite linear reverse;
   }
 }
 
 @keyframes lightRotate {
   0% {
-    --x: -100%;
+    --x: -25%;
+    --intensity: black;
   }
+
+  25% {
+    --x: 0%;
+    --intensity: lightgreen;
+  }
+
+  75% {
+    --x: 100%;
+    --intensity: lightgreen;
+  }
+
   100% {
-    --x: 200%;
+    --x: 125%;
+    --intensity: black;
   }
 }
 
 @keyframes bounce {
-  0%, 57%, 85%, 100% { bottom: -1em; animation-timing-function: ease-out;}
-  28% { bottom: 3em; animation-timing-function: ease-in;}
-  71% { bottom: 1em; animation-timing-function: ease-in;}
-  92.5% { bottom: 0em; animation-timing-function: ease-in;}
+
+  0%,
+  57%,
+  85%,
+  100% {
+    animation-timing-function: ease-out;
+    bottom: -1em;
+    --y: 5%;
+    --lightStrength: 25%;
+  }
+
+  28% {
+    animation-timing-function: ease-in;
+    bottom: 3em;
+    --y: 25%;
+    --lightStrength: 45%;
+  }
+
+  71% {
+    animation-timing-function: ease-in;
+    bottom: 1em;
+    --y: 15%;
+    --lightStrength: 35%;
+  }
+
+  92.5% {
+    animation-timing-function: ease-in;
+    bottom: 0em;
+    --y: 10%;
+    --lightStrength: 30%;
+  }
 }
 
 .ballShadow {
   position: absolute;
-  width: 100%; height: 100%;
-  //left: 50%; top: 50%;
-  background-image: radial-gradient(#000, #0000 50%);
+  width: 50%;
+  height: 100%;
+  left: 25%;
+  top: 1.4em;
+  background-image: radial-gradient(#000 12%, #0000 30%);
 }
+
+/*
+@keyframes bounceShadow {
+
+  0%,
+  57%,
+  85%,
+  100% {
+    animation-timing-function: ease-out;
+    bottom: -1em;
+    --y: 5%;
+    --lightStrength: 25%;
+  }
+
+  28% {
+    animation-timing-function: ease-in;
+    bottom: 3em;
+    --y: 25%;
+    --lightStrength: 45%;
+  }
+
+  71% {
+    animation-timing-function: ease-in;
+    bottom: 1em;
+    --y: 15%;
+    --lightStrength: 35%;
+  }
+
+  92.5% {
+    animation-timing-function: ease-in;
+    bottom: 0em;
+    --y: 10%;
+    --lightStrength: 30%;
+  }
+}
+  */
+
 
 .floor {
   width: 16em;
   height: 16em;
-  background-image: 
+  background-image:
     radial-gradient(#0000, #000 75%),
-    repeating-conic-gradient(
-      from 45deg,
-      #111 0deg 90deg,
-      #222 90deg 180deg);
+    repeating-conic-gradient(from 45deg,
+      #555 0deg 90deg,
+      #666 90deg 180deg);
   background-size: 100%, 1em 1em;
 
   position: absolute;
   top: 1em;
-  transform: 
-    translate(-50%, -50%)
-    rotateX(90deg);
+  transform:
+    translate(-50%, -50%) rotateX(90deg);
 }
