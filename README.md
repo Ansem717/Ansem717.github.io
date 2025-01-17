@@ -10,11 +10,11 @@ So the main reason of making this repo public was to use github's hosting servic
 
 HTML and CSS only!
 
-Be sure you're viewing the webpage here: [https://Ansem717.github.io](https://Ansem717.github.io)
+Be sure you're viewing the webpage here: [https://Ansem717.github.io](https://Ansem717.github.io){:target="_blank"}
 It should just be showing this Markdown file, but this way you're on the actual *.io page*.
 
 As I mentioned, Website: The Game acts as a CSS sandbox. I would follow some articles or youtube videos and make some concept come to life. Sometimes an idea doesn't have a design inspiration or I end up ~~overscoping~~ thinking bigger and want to start a new project.
 
 Without further ado:
-- [https://Ansem717.github.io/WebsiteTheGame/VersionOne/index.html](Version One: Light Chasing Mouse)
-- [https://Ansem717.github.io/WebsiteTheGame/VersionOne/index.html](Version Two: Moving Around a Sphere)
+- [https://Ansem717.github.io/WebsiteTheGame/VersionOne/index.html](Version One: Light Chasing Mouse){:target="_blank"}
+- [https://Ansem717.github.io/WebsiteTheGame/VersionOne/index.html](Version Two: Moving Around a Sphere){:target="_blank"}
