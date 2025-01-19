@@ -13,7 +13,7 @@ Be sure you're viewing the webpage here: [ansem717.github.io](https://ansem717.g
 As I mentioned, Website: The Game acts as a CSS sandbox. I would follow some articles or youtube videos and make some concept come to life. Sometimes an idea doesn't have a design inspiration or I end up ~~overscoping~~ thinking bigger and want to start a new project.
 
 Without further ado:
-- [Version One: Light Chasing Mouse](https://ansem717.github.io/WebsiteTheGame/VersionOne/index.html)
-- [Version Two: Bouncing Ball](https://ansem717.github.io/WebsiteTheGame/VersionTwo/index.html)
+- [Idea One: Light Chasing Mouse](https://ansem717.github.io/WebsiteTheGame/VersionOne/index.html)
+- [Idea Two: Bouncing Ball](https://ansem717.github.io/WebsiteTheGame/VersionTwo/index.html)
   - **NOTE:** Click and Hold the mouse button to make the ball bounce.
-- [Version Three: Flying Through Space](https://ansem717.github.io/WebsiteTheGame/VersionThree/index.html)
+- [Idea Three: Flying Through Space](https://ansem717.github.io/WebsiteTheGame/VersionThree/index.html)
