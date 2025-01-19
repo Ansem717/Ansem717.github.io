@@ -1,10 +1,12 @@
 import requests
 import math
-
-WEBHOOK_URL = "https://discord.com/api/webhooks/1323772589515997265/GywJ3jLw4LK98Swd3KeIrJsL4HdEz_r2ZcK29C9jnWDs0lpcziwNiLkCgUTxZnjzbv0J"
-# WEBHOOK_URL = "https://discord.com/api/webhooks/1312424164195565659/IAc-RjAKIP6dG1jwqmuyQ2cQU1MMnLLcKopNjWSamWqQ3lXMswb2ezuYue2EAAY_bENV"
+import os
+from dotenv import load_dotenv
 
 def main():
+
+    load_dotenv()
+    WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_PAYMENT_CALCULATOR")
 
     print("\n\n#\n# Digifrat Rent Calculator\n#\n")
     months = [

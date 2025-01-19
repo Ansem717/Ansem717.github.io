@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
+import os
+from dotenv import load_dotenv
 
-WEBHOOK_URL = "https://discord.com/api/webhooks/1311298348703285258/XGQAPmwgDq3Y96IxLAhg_3f6ZKg3htXASF4GFfReUB3Y34lqzx9mPNI9nm2b7Srwuhv9"
-WEBSITE_URL = "https://www.signingsavvy.com/signoftheday"
+WEBSITE_URL = "https://www.signingsavvy.com/signoftheday" 
 
 def fetch_webpage_content(url):
     try:
@@ -39,6 +40,11 @@ def post_to_discord(video, title, context):
     payload = {
         "content": final
     }
+
+    load_dotenv()
+    WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_SIGN_OF_THE_DAY")
+    # WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_TEST_HOOK")
+
     response = requests.post(WEBHOOK_URL, json=payload)
     if response.status_code == 204:
         print("Successfully posted to Discord.")
