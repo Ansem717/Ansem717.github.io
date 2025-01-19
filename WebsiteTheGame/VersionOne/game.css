@@ -269,7 +269,7 @@ i:nth-child(n+761):nth-child(-n+800):hover ~ .content {
   --positionY: 19;
 }
 
-.square {
+.circle {
   --myW: calc(100vw/8);
   --myH: calc(100vh/4);
   width: var(--myW);
