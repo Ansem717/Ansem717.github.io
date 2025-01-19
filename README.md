@@ -14,4 +14,6 @@ As I mentioned, Website: The Game acts as a CSS sandbox. I would follow some art
 
 Without further ado:
 - [Version One: Light Chasing Mouse](https://ansem717.github.io/WebsiteTheGame/VersionOne/index.html)
-- [Version Two: Moving Around a Sphere](https://ansem717.github.io/WebsiteTheGame/VersionTwo/index.html)
+- [Version Two: Bouncing Ball](https://ansem717.github.io/WebsiteTheGame/VersionTwo/index.html)
+  - **NOTE:** Click and Hold the mouse button to make the ball bounce.
+- [Version Three: Flying Through Space](https://ansem717.github.io/WebsiteTheGame/VersionThree/index.html)
