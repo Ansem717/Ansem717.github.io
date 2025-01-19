@@ -1,0 +1,53 @@
+@property --starcolor {
+  initial-value: lightblue;
+  syntax: "<color>";
+  inherits: false;
+}
+body {
+  background: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  font-size: 10px;
+  position: relative;
+  perspective: 50em;
+  perspective-origin: 50% 50%;
+}
+
+.scene {
+  transform-style: preserve-3d;
+  position: absolute;
+}
+
+.star {
+  position: absolute;
+  width: 2em;
+  left: -5em;
+  height: 2em;
+  top: -5em;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at center, var(--starcolor), #000 10%);
+  animation: flyToCam 5s linear infinite;
+}
+
+@keyframes flyToCam {
+  0% {
+    transform: translateZ(-50em);
+    --starcolor: black;
+  }
+  40% {
+    transform: translateZ(50em);
+    --starcolor: lightblue;
+  }
+  100% {
+    transform: translateZ(150em);
+    --starcolor: lightblue;
+  }
+}
+
+/*# sourceMappingURL=game.css.map */
