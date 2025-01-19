@@ -1,6 +1,26 @@
+@property --x {
+  initial-value: 50%;
+  syntax: "<percentage>";
+  inherits: false;
+}
+@property --y {
+  initial-value: 5%;
+  syntax: "<percentage>";
+  inherits: false;
+}
+@property --intensity {
+  initial-value: lightgreen;
+  syntax: "<color>";
+  inherits: false;
+}
+@property --lightStrength {
+  initial-value: 25%;
+  syntax: "<percentage>";
+  inherits: false;
+}
 :root {
-  --r: 30s;
-  --b: 1.6s;
+  --r: 24s;
+  --b: 1.33s;
 }
 
 body {
@@ -14,6 +34,12 @@ body {
   perspective: 10em;
   perspective-origin: 50% calc(50% - 1em);
 }
+body:active .ball {
+  animation: bounce var(--b) ease-out 1, lightRotate var(--r) infinite linear, sceneRotate var(--r) infinite linear reverse;
+}
+body:active .ballShadow {
+  animation: bounceShadow var(--b) ease-out 1;
+}
 
 .scene {
   position: relative;
@@ -26,26 +52,6 @@ body {
     transform: rotateY(360deg);
   }
 }
-@property --x {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --y {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 5%;
-}
-@property --intensity {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: lightgreen;
-}
-@property --lightStrength {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 25%;
-}
 .ball {
   width: 2em;
   height: 2em;
@@ -55,9 +61,6 @@ body {
   left: -1em;
   background: radial-gradient(circle at var(--x) var(--y), var(--intensity), var(--lightStrength), black calc(var(--lightStrength) + 50%));
   animation: sceneRotate var(--r) infinite linear reverse, lightRotate var(--r) infinite linear;
-}
-.ball:active {
-  animation: bounce var(--b) ease-out 1, lightRotate var(--r) infinite linear, sceneRotate var(--r) infinite linear reverse;
 }
 
 @keyframes lightRotate {
@@ -113,6 +116,24 @@ body {
   background-image: radial-gradient(#000 12%, rgba(0, 0, 0, 0) 30%);
 }
 
+@keyframes bounceShadow {
+  0%, 57%, 85%, 100% {
+    animation-timing-function: ease-out;
+    top: 1.4em;
+  }
+  28% {
+    animation-timing-function: ease-in;
+    top: 5.4em;
+  }
+  71% {
+    animation-timing-function: ease-in;
+    top: 3.4em;
+  }
+  92.5% {
+    animation-timing-function: ease-in;
+    top: 2.4em;
+  }
+}
 .floor {
   width: 16em;
   height: 16em;

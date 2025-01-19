@@ -1,6 +1,12 @@
+
+@property --x { initial-value: 50%; syntax: '<percentage>'; inherits: false;  }
+@property --y { initial-value: 5%; syntax: '<percentage>'; inherits: false;  }
+@property --intensity { initial-value: lightgreen; syntax: '<color>'; inherits: false; }
+@property --lightStrength { initial-value: 25%; syntax: '<percentage>';  inherits: false; }
+
 :root {
-  --r: 30s;
-  --b: 1.6s;
+  --r: 24s;
+  --b: 1.33s;
 }
 
 body {
@@ -13,6 +19,18 @@ body {
   font-size: 75px;
   perspective: 10em;
   perspective-origin: 50% calc(50% - 1em);
+
+  &:active {
+    .ball {
+      animation:
+        bounce var(--b) ease-out 1,
+        lightRotate var(--r) infinite linear,
+        sceneRotate var(--r) infinite linear reverse;
+    }
+    .ballShadow {
+        animation: bounceShadow var(--b) ease-out 1,
+    }
+  }
 }
 
 .scene {
@@ -22,33 +40,7 @@ body {
 }
 
 @keyframes sceneRotate {
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-@property --x {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 50%;
-}
-
-@property --y {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 5%;
-}
-
-@property --intensity {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: lightgreen;
-}
-
-@property --lightStrength {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 25%;
+  to { transform: rotateY(360deg); }
 }
 
 .ball {
@@ -65,68 +57,31 @@ body {
   animation:
     sceneRotate var(--r) infinite linear reverse,
     lightRotate var(--r) infinite linear;
-
-  &:active {
-    animation:
-      bounce var(--b) ease-out 1,
-      lightRotate var(--r) infinite linear,
-      sceneRotate var(--r) infinite linear reverse;
-  }
 }
 
 @keyframes lightRotate {
-  0% {
-    --x: -25%;
-    --intensity: black;
-  }
-
-  25% {
-    --x: 0%;
-    --intensity: lightgreen;
-  }
-
-  75% {
-    --x: 100%;
-    --intensity: lightgreen;
-  }
-
-  100% {
-    --x: 125%;
-    --intensity: black;
-  }
+  0% { --x: -25%; --intensity: black;   }
+  25% { --x: 0%; --intensity: lightgreen;   }
+  75% { --x: 100%; --intensity: lightgreen;   }
+  100% { --x: 125%; --intensity: black;   }
 }
 
 @keyframes bounce {
-
-  0%,
-  57%,
-  85%,
-  100% {
+  0%, 57%, 85%, 100% { 
     animation-timing-function: ease-out;
-    bottom: -1em;
-    --y: 5%;
-    --lightStrength: 25%;
+    bottom: -1em; --y: 5%; --lightStrength: 25%;
   }
-
   28% {
     animation-timing-function: ease-in;
-    bottom: 3em;
-    --y: 25%;
-    --lightStrength: 45%;
+    bottom: 3em; --y: 25%; --lightStrength: 45%;
   }
-
   71% {
     animation-timing-function: ease-in;
-    bottom: 1em;
-    --y: 15%;
-    --lightStrength: 35%;
+    bottom: 1em; --y: 15%; --lightStrength: 35%; 
   }
-
   92.5% {
     animation-timing-function: ease-in;
-    bottom: 0em;
-    --y: 10%;
-    --lightStrength: 30%;
+    bottom: 0em; --y: 10%; --lightStrength: 30%;
   }
 }
 
@@ -139,42 +94,24 @@ body {
   background-image: radial-gradient(#000 12%, #0000 30%);
 }
 
-/*
 @keyframes bounceShadow {
-
-  0%,
-  57%,
-  85%,
-  100% {
+  0%, 57%, 85%, 100% {
     animation-timing-function: ease-out;
-    bottom: -1em;
-    --y: 5%;
-    --lightStrength: 25%;
+    top: 1.4em;
   }
-
   28% {
     animation-timing-function: ease-in;
-    bottom: 3em;
-    --y: 25%;
-    --lightStrength: 45%;
+    top: 5.4em;
   }
-
   71% {
     animation-timing-function: ease-in;
-    bottom: 1em;
-    --y: 15%;
-    --lightStrength: 35%;
+    top: 3.4em;
   }
-
   92.5% {
     animation-timing-function: ease-in;
-    bottom: 0em;
-    --y: 10%;
-    --lightStrength: 30%;
+    top: 2.4em;
   }
 }
-  */
-
 
 .floor {
   width: 16em;
