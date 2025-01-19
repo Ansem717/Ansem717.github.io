@@ -1,4 +1,4 @@
-@property --starcolor { initial-value: lightblue; syntax: "<color>"; inherits: false; }
+@property --starcolor { initial-value: black; syntax: "<color>"; inherits: false; }
 
 body {
     background: #000;
@@ -7,7 +7,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .main {
@@ -24,21 +23,34 @@ body {
 }
 
 .star {
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.star i {
     position: absolute;
     
     width: 2em;
-    left: -5em;
     height: 2em;
-    top: -5em;
+    top: 0em;
+    left: 0em;
+
     border-radius: 50%;
-    
     background-image: radial-gradient(circle at center, var(--starcolor), #000 10%);
 
     animation: flyToCam 5s linear infinite;
 }
 
+@for $k from 0 to 300 {
+    .star i:nth-child(#{$k}) {
+        top: calc(-40em + (#{($k * 9301 + 49297) % 233280} / 233280) * 80em);
+        left: calc(-60em + (#{($k * 9301 + 49297) % 133280} / 133280) * 120em);
+        animation-delay: calc(0s + (#{($k * 7301 + 39297) % 83280} / 83280) * 7s );
+    }
+}
+
 @keyframes flyToCam {
     0% { transform: translateZ(-50em); --starcolor: black; }
-    40% { transform: translateZ(50em); --starcolor: lightblue;}
-    100% { transform: translateZ(150em); --starcolor: lightblue; }
+    40% { transform: translateZ(50em); --starcolor: white;}
+    100% { transform: translateZ(150em); --starcolor: white; }
 }
