@@ -5,10 +5,14 @@
   --pickupDuration: 1s;
 }
 
-.camera {
+body {
   background-color: #000;
   min-height: 100vh;
   overflow: hidden;
+}
+
+.camera {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +20,19 @@
   perspective: 10em;
   perspective-origin: calc(50% + var(--x)) calc(50% + var(--y));
 
+  /**
+  transform: all 0.2s ease-in-out;
+  /**/
   animation: test var(--pickupDuration) ease-in-out 1 forwards;
+  /**/
 }
 
+/**/
 @keyframes test {
   from { --y: -160px; --x: -160px; }
   to { --y: -96px; --x: 0px; }
 }
+/**/
 
 .scene {
   position: relative;
