@@ -1,4 +1,11 @@
 # Andy's Generic Portfolio Repo
+Links:
+ - [Github Repo](https://www.github.com/Ansem717/Ansem717.github.io)
+ - [Github Pages](https://ansem717.github.io)
+ - [WordPress Website and Blog](https://www.andymalik.com) *(Note: still has template stuff all over because I'm not vibing with Wordpress)*
+ - [LinkedIn](http://linkedin.com/in/andy-malik)
+ - Always feel free to [Email Me@AndyMalik.com](mailto:me@andymalik.com)
+
 ### So many private repos...
 I've been needing to do this for so long. Throughout my many educational adventures, I've practiced and implemented a myriad of programming techniques and tricks, but they were all in private repos for that school!
 

@@ -27,4 +27,4 @@ jobs:
           echo "DISCORD_WEBHOOK_SIGN_OF_THE_DAY=${{ secrets.DISCORD_WEBHOOK_SIGN_OF_THE_DAY }}" >> $GITHUB_ENV
 
       - name: Execute Sign Of The Day Scraper
-        run: python sign_of_the_day_scraper_correct.py
+        run: python sign_of_the_day_scraper.py
