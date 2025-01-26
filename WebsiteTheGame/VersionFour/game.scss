@@ -1,27 +1,27 @@
-// @property --x { initial-value: 50%; syntax: '<percentage>'; inherits: false;  }
+@property --y { initial-value: 0px; syntax: '<length>'; inherits: true;  }
+@property --x { initial-value: 0px; syntax: '<length>'; inherits: true;  }
 
 :root {
   --pickupDuration: 1s;
-  --a: -50em;
 }
 
-body {
+.camera {
   background-color: #000;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 75px;
+  font-size: 80px;
   perspective: 10em;
-  perspective-origin: 50% calc(50% - 1.2em);
+  perspective-origin: calc(50% + var(--x)) calc(50% + var(--y));
 
-  animation: test 10s ease-in-out 1;
+  animation: test var(--pickupDuration) ease-in-out 1 forwards;
 }
 
 @keyframes test {
-  from {perspective-origin: 50% calc(50% + 1em);}
-  to {perspective-origin: 50% calc(50% - 1.2em);}
+  from { --y: -160px; --x: -160px; }
+  to { --y: -96px; --x: 0px; }
 }
 
 .scene {
