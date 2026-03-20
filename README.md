@@ -23,4 +23,3 @@ And finally, I am not focusing on mobile responsiveness right now, so phone acce
 - [Idea Two: Bouncing Ball](https://ansem717.github.io/WebsiteTheGame/VersionTwo/index.html)
   - **NOTE:** Click and Hold the mouse button to make the ball bounce.
 - [Idea Three: Flying Through Space](https://ansem717.github.io/WebsiteTheGame/VersionThree/index.html)
-- [Idea Four: Picking Up Parchment](https://ansem717.github.io/WebsiteTheGame/VersionFour/index.html)
